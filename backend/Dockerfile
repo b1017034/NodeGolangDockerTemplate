@@ -7,6 +7,7 @@ RUN apk update && apk add git
 
 WORKDIR /go/src
 COPY go.mod .
+COPY .gitconfig /root
 
 RUN go mod tidy && \
     go install github.com/cosmtrek/air@latest
