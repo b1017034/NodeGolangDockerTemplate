@@ -14,12 +14,14 @@ services:
         source: ./frontend
         target: /usr/src/app
     ports:
-      - "8000:3000"
+      - "3000:3000"
 
   backend:
     build:
       context: ./backend
       dockerfile: Dockerfile
+      args:
+        - ORG=${ORG}
     ports:
       - "8080:8080"
     depends_on:

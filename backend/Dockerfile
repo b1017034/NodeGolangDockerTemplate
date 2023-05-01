@@ -1,9 +1,11 @@
 FROM golang:1.20-alpine
 
+ARG ORG
+
 ENV GOPATH /go
 ENV GO111MODULE on
 ENV GOPROXY direct
-ENV ORG b1017034
+
 
 RUN apk update && apk add git
 
