@@ -1,5 +1,0 @@
-[user]
-    name = ${user_name}
-
-[url "${your_token}:x-oauth-basic@github.com/"]
-    insteadOf = https://github.com/
